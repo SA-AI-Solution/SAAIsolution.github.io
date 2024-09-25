@@ -1,55 +1,72 @@
+/* General Body Styles */
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
     margin: 0;
     padding: 0;
-    color: #333;
     background-color: #f4f4f4;
+    color: #333;
 }
-
-logo {
-    width: 100px; /* or any other dimensions */
-    height: auto;
-    display: block;
-}
-
 
 header {
-    background: #005a9c;
+    background-color: #20232a;
     color: #fff;
     padding: 10px 20px;
     text-align: center;
 }
 
-header nav ul {
+header .logo {
+    height: 50px;
+}
+
+nav ul {
     list-style: none;
     padding: 0;
 }
 
-header nav ul li {
+nav ul li {
     display: inline;
     margin-right: 10px;
 }
 
-header nav ul li a {
+nav ul li a {
     color: #fff;
     text-decoration: none;
 }
 
-section {
+main {
     padding: 20px;
-    margin: 0 10px;
-    background: #fff;
-    border: 1px solid #ddd;
+    text-align: center;
+}
+
+section {
+    margin-bottom: 20px;
 }
 
 footer {
+    background-color: #20232a;
+    color: #fff;
     text-align: center;
     padding: 10px 20px;
-    background: #333;
-    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
-footer p {
-    margin: 0;
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Specific Section Styles */
+#services ul {
+    text-align: left;
+    display: inline-block;
+}
+
+.project {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    padding: 10px;
+    text-align: left;
 }
