@@ -1,45 +1,61 @@
-/* General Body Styles */
-body {
-    font-family: Arial, sans-serif;
+/* Reset margins, paddings, and box-sizing */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f4f4f4;
     color: #333;
+    line-height: 1.6;
+    padding: 20px;
 }
 
 header {
     background-color: #20232a;
     color: #fff;
     padding: 10px 20px;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header .logo {
-    height: 50px;
+    height: 60px; /* Adjust logo size */
 }
 
 nav ul {
     list-style: none;
-    padding: 0;
 }
 
 nav ul li {
     display: inline;
-    margin-right: 10px;
+    margin-left: 20px;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    font-weight: bold;
 }
 
 main {
+    max-width: 1200px;
+    margin: 20px auto;
     padding: 20px;
-    text-align: center;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 section {
     margin-bottom: 20px;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 10px;
 }
 
 footer {
@@ -47,26 +63,27 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px 20px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    margin-top: 20px;
 }
 
-footer a {
-    color: #fff;
-    text-decoration: none;
-}
-
-/* Specific Section Styles */
-#services ul {
-    text-align: left;
+/* Adding some padding inside the footer to keep it from sticking at the bottom */
+footer p, footer a {
+    margin-top: 8px;
     display: inline-block;
 }
 
-.project {
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    margin-bottom: 20px;
-    padding: 10px;
-    text-align: left;
+/* Responsiveness */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav ul {
+        padding: 10px;
+    }
+
+    nav ul li {
+        display: block;
+        margin-top: 10px;
+    }
 }
