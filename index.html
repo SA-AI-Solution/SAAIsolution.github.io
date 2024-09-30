@@ -107,11 +107,14 @@
         
         .about-us {
             position: relative;
+            width: 70%;
             background: url('/images/bg.gif') center/cover no-repeat;
             padding: 100px 20px;
             color: white;
             text-align: center;
-            filter: grayscale(40%);
+            filter: grayscale(50%);
+            border-radius: 15px; /* Adding a border-radius for a better visual effect */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adding some shadow for a lifted effect */
         }
 
         .about-us::after {
@@ -123,6 +126,7 @@
             height: 100%;
             background: rgba(0, 0, 0, 0.3); /* Semi-transparent dark overlay */
             z-index: 1;
+            border-radius: 15px; /* Match the border-radius of the container */
         }
 
         .about-us-content {
@@ -143,7 +147,7 @@
             font-size: 1.2rem;
             line-height: 1.6;
             margin-bottom: 2rem;
-            color: white;
+            color: #f1f1f1;
         }
 
         .about-us .button {
@@ -342,13 +346,14 @@
 
     <!-- Footer Section -->
     <footer class="container">
-        <small>
-            <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank">Connect through LinkedIn</a> • 
-            <a href="#">Terms of Service</a> • 
-            <a href="#">Contact Us</a> <br>
+        <small style="font-weight: normal;">
+            <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank" style="font-weight: normal;">Connect through LinkedIn</a> • 
+            <a href="#" style="font-weight: normal;">Terms of Service</a> • 
+            <a href="#" style="font-weight: normal;">Contact Us</a> <br>
             &copy; 2024 Shelton Angelina LLC. All rights reserved.
         </small>
     </footer>
+
 
 </body>
 
