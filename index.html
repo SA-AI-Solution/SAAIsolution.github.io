@@ -78,13 +78,40 @@
             text-align: center;
         }
 
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #2b1b84;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: #5a5a5a;
+            margin-bottom: 2rem;
+        }
+
+        .hero a.button {
+            background: #a74ef1;
+            color: #ffffff;
+            font-size: 1rem;
+            padding: 15px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .hero a.button:hover {
+            background: #8e3de8;
+        }
+        
         .about-us {
             position: relative;
             background: url('/images/bg.gif') center/cover no-repeat;
             padding: 100px 20px;
             color: white;
             text-align: center;
-            filter: grayscale(60%);
+            filter: grayscale(40%);
         }
 
         .about-us::after {
@@ -94,7 +121,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.5); /* Semi-transparent dark overlay */
+            background: rgba(0, 0, 0, 0.3); /* Semi-transparent dark overlay */
             z-index: 1;
         }
 
@@ -109,6 +136,7 @@
         .about-us h2 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
+            color: #f1f1f1;
         }
 
         .about-us p {
@@ -173,7 +201,6 @@
     <nav class="container-fluid">
         <!-- Logo Area -->
         <div class="logo">
-            <img src="/path/to/your/logo.png" alt="Shelton Angelina LLC Logo">
             <strong>Shelton Angelina LLC</strong>
         </div>
 
@@ -192,8 +219,8 @@
 
     <!-- Hero Section -->
     <header class="hero">
-        <h1>Elevating Your Business with AI</h1>
-        <p>Global leaders in AI innovation, crafting cutting-edge solutions for tangible business growth.</p>
+        <h1>Empower Your Business with AI</h1>
+        <p>Every Business Counts and Can Benefit From the AI Revolution, even small businesses. And We Are Here To Help.</p>
         <a href="#services" class="button primary">Explore Our Work</a>
     </header>
 
