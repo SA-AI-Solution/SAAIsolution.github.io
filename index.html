@@ -25,6 +25,24 @@
             padding: 2rem;
         }
 
+        .services, .industries {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-icon, .industry-icon, .project-icon {
+            font-size: 40px;
+            color: #664ef1;
+            margin-bottom: 1rem;
+        }
+
+        .recent-projects {
+            padding: 3rem 2rem;
+        }
+
         .contact-section {
             background: linear-gradient(180deg, #664ef1, #a74ef1);
             color: white;
@@ -37,6 +55,8 @@
             text-align: center;
         }
     </style>
+    <!-- Adding Font Awesome for Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -69,8 +89,12 @@
 
     <!-- Services Section -->
     <main id="services" class="services container">
+        <h2>Our Services</h2>
         <div class="grid">
             <section>
+                <div class="service-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
                 <hgroup>
                     <h2>AI Consulting</h2>
                     <h3>Transform your business operations with tailored AI solutions</h3>
@@ -78,6 +102,9 @@
                 <p>We provide professional AI consulting services to help businesses understand and apply AI technologies in their daily operations.</p>
             </section>
             <section>
+                <div class="service-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
                 <hgroup>
                     <h2>AI Tools & Solutions</h2>
                     <h3>Personalized AI solutions for small businesses</h3>
@@ -91,22 +118,20 @@
     <section id="industries" class="industries container">
         <h2>Industries We Serve</h2>
         <div class="grid">
-            <div>
+            <section>
+                <div class="industry-icon">
+                    <i class="fas fa-building"></i>
+                </div>
                 <h3>Real Estate</h3>
                 <p>AI-powered lease management, pricing prediction, and personalized marketing tools.</p>
-            </div>
-            <div>
-                <h3>Tourism & Hospitality</h3>
-                <p>Dynamic pricing tools, personalized trip planners, and sentiment analysis for customer reviews.</p>
-            </div>
-            <div>
+            </section>
+            <section>
+                <div class="industry-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
                 <h3>Restaurant</h3>
                 <p>Ingredient procurement optimization, menu personalization, and sales forecasting.</p>
-            </div>
-            <div>
-                <h3>Education</h3>
-                <p>Interactive homework assistance, personalized learning recommendations, and progress analysis.</p>
-            </div>
+            </section>
         </div>
     </section>
 
@@ -115,20 +140,18 @@
         <h2>Recent Projects</h2>
         <div class="grid">
             <div>
-                <h3>AI-Driven Lease Management System</h3>
-                <p>We developed an AI lease management assistant to help small landlords automate the lease process, reduce manual tasks, and improve tenant experience. The project includes automated tenant screening and price prediction models for lease contracts.</p>
-            </div>
-            <div>
+                <div class="project-icon">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
                 <h3>Dynamic Pricing for Boutique Hotels</h3>
                 <p>Our team implemented a dynamic pricing system for a small chain of boutique hotels in the U.S., boosting occupancy rates and optimizing revenue using real-time market data and competitive pricing analysis.</p>
             </div>
             <div>
+                <div class="project-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
                 <h3>Ingredient Procurement Optimization for Restaurants</h3>
                 <p>This project aimed to optimize ingredient procurement by predicting demand and minimizing waste for a restaurant in San Francisco. The solution significantly reduced costs and improved inventory management.</p>
-            </div>
-            <div>
-                <h3>Personalized Learning Path for Private Schools</h3>
-                <p>We delivered a personalized learning path system for a tutoring institution, allowing students to receive customized learning experiences. The AI solution analyzed student performance to recommend targeted tutoring.</p>
             </div>
         </div>
     </section>
