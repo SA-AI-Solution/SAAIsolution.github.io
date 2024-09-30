@@ -15,7 +15,7 @@
             font-family: 'Roboto', sans-serif;
         }
 
-                /* Fancy Header Styles */
+        /* Fancy Header Styles */
         nav.container-fluid {
             display: flex;
             justify-content: space-between;
@@ -80,10 +80,11 @@
 
         .about-us {
             position: relative;
-            background: url('/path/to/your/about-us-image.jpg') center/cover no-repeat;
+            background: url('/images/bg.gif') center/cover no-repeat;
             padding: 100px 20px;
             color: white;
             text-align: center;
+            filter: grayscale(60%);
         }
 
         .about-us::after {
@@ -93,7 +94,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.6);
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent dark overlay */
             z-index: 1;
         }
 
@@ -168,17 +169,25 @@
 </head>
 
 <body>
-    <!-- Navigation Bar -->
+    <!-- Fancy Navigation Bar -->
     <nav class="container-fluid">
-        <ul>
-            <li><strong>Shelton Angelina LLC</strong></li>
+        <!-- Logo Area -->
+        <div class="logo">
+            <img src="/path/to/your/logo.png" alt="Shelton Angelina LLC Logo">
+            <strong>Shelton Angelina LLC</strong>
+        </div>
+
+        <!-- Navigation Links -->
+        <ul class="nav-links">
+            <li><a href="#home">01 Home</a></li>
+            <li><a href="#services">02 Services</a></li>
+            <li><a href="#industries">03 Industries</a></li>
+            <li><a href="#projects">04 Projects</a></li>
+            <li><a href="#contact">05 Contact Us</a></li>
         </ul>
-        <ul>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#projects">Recent Projects</a></li>
-            <li><a href="#contact" role="button">Contact Us</a></li>
-        </ul>
+
+        <!-- Call to Action Button -->
+        <a href="#contact" class="cta-button">Get in Touch</a>
     </nav>
 
     <!-- Hero Section -->
