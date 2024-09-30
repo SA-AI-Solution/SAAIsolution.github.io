@@ -1,48 +1,69 @@
+/* General Body and HTML Styles */
 body, html {
     margin: 0;
     padding: 0;
-    font-family: 'Arial', sans-serif;
-    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: #fff;
+    color: #333;
 }
 
+/* Hero Section Styles */
 #hero {
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    height: 100vh;
-    background-image: url('images/futuristic_cityscape.png');
-    background-size: cover;
-    background-position: center;
+    justify-content: space-between;
+    text-align: left;
+    padding: 50px 10%;
+    background-color: #f0f0f0; /* Light background for contrast */
+    color: #fff; /* Adjust text color as needed */
 }
 
-.hero-text h1, .hero-text p {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 20px;
+#hero img {
+    max-width: 50%;
+    height: auto;
+    align-self: flex-end;
 }
 
-section {
-    padding: 50px 20px;
+.hero-content {
+    max-width: 50%;
 }
 
-h2 {
-    font-size: 24px;
-    color: #000;
+.hero-content h1 {
+    font-size: 3rem;
+    color: #6200ea; /* Deep purple similar to Monta.ai */
 }
 
-industry, .ai-solutions {
-    margin-top: 20px;
+.hero-content p {
+    font-size: 1.5rem;
+    margin: 20px 0;
+    color: #333; /* Darker text for readability */
 }
 
-footer {
-    background: #202020;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
+.hero-content button {
+    padding: 10px 20px;
+    background-color: #6200ea;
+    border: none;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
-footer a {
-    color: #fff;
-    text-decoration: none;
+.hero-content button:hover {
+    background-color: #4500a0; /* Darker shade for hover effect */
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+    #hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    #hero img {
+        max-width: 100%;
+        order: -1; /* Image above text on smaller screens */
+    }
+    .hero-content {
+        max-width: 100%;
+    }
 }
