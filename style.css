@@ -30,6 +30,12 @@ body {
     border-radius: 5px;
 }
 
+.logo img {
+    height: 40px; /* Adjust the height of the logo */
+    margin-right: 10px; /* Add spacing between the logo and the company name */
+    vertical-align: middle; /* Align the logo with the text */
+}
+
 /* Trusted Section */
 .trusted-section {
     background: #fff;
