@@ -122,79 +122,7 @@
         .hero a.button:hover {
             background: #8e3de8;
         }
-
-        .blog-section {
-            width: 100%;
-            max-width: 1440px;
-            margin: 0 auto;
-            padding: 5rem 2rem;
-            background-color: #f3f1fe;
-            border-top: 4px solid #a74ef1;
-        }
         
-        .blog-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-        
-        .blog-header h2 {
-            font-size: 2.8rem;
-            color: #2b1b84;
-            margin-bottom: 0.5rem;
-        }
-        
-        .blog-header p {
-            font-size: 1.2rem;
-            color: #555;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-            gap: 2.5rem;
-        }
-        
-        .blog-card {
-            background: white;
-            border-radius: 16px;
-            padding: 2rem;
-            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .blog-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-        }
-        
-        .blog-card h3 {
-            font-size: 1.7rem;
-            color: #2b1b84;
-            margin-bottom: 1rem;
-        }
-        
-        .blog-meta {
-            font-size: 1rem;
-            color: #888;
-            margin-bottom: 1.2rem;
-        }
-        
-        .blog-read-button {
-            background: #a74ef1;
-            color: white;
-            padding: 0.75rem 1.5rem;
-            font-size: 1rem;
-            border-radius: 8px;
-            display: inline-block;
-            transition: background 0.3s ease;
-        }
-        
-        .blog-read-button:hover {
-            background: #8e3de8;
-        }
-
         .about-us {
             position: relative;
             width: 80%;
@@ -381,6 +309,80 @@
     
       document.addEventListener("DOMContentLoaded", loadBlogPosts);
     </script>
+
+    <style>
+    .blog-section {
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 5rem 2rem;
+        background-color: #f3f1fe;
+        border-top: 4px solid #a74ef1;
+    }
+    
+    .blog-header {
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+    
+    .blog-header h2 {
+        font-size: 2.8rem;
+        color: #2b1b84;
+        margin-bottom: 0.5rem;
+    }
+    
+    .blog-header p {
+        font-size: 1.2rem;
+        color: #555;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    
+    .blog-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+        gap: 2.5rem;
+    }
+    
+    .blog-card {
+        background: white;
+        border-radius: 16px;
+        padding: 2rem;
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .blog-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    }
+    
+    .blog-card h3 {
+        font-size: 1.7rem;
+        color: #2b1b84;
+        margin-bottom: 1rem;
+    }
+    
+    .blog-meta {
+        font-size: 1rem;
+        color: #888;
+        margin-bottom: 1.2rem;
+    }
+    
+    .blog-read-button {
+        background: #a74ef1;
+        color: white;
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+        border-radius: 8px;
+        display: inline-block;
+        transition: background 0.3s ease;
+    }
+    
+    .blog-read-button:hover {
+        background: #8e3de8;
+    }
+    </style>
 
     <!-- Services Section -->
     <main id="services" class="services container">
