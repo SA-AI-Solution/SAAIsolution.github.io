@@ -350,7 +350,16 @@
           const storedViews = JSON.parse(localStorage.getItem("blogViews")) || {};
     
           posts.forEach(post => {
-            const views = storedViews[post.id] || post.views || 0;
+            const daysSincePublished = Math.floor(
+              (new Date() - new Date(post.date)) / (1000 * 60 * 60 * 24)
+            );
+            
+            // Use logarithmic model: fast growth early, then slower
+            const estimatedViews = Math.floor(450 * Math.log(daysSincePublished + 1) + 10);
+            
+            // Use stored views if available, otherwise estimated
+            const views = storedViews[post.id] || estimatedViews;
+
     
             const postElement = document.createElement("div");
             postElement.classList.add("blog-card");
