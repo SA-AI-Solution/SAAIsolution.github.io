@@ -1,165 +1,518 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>How AI is Transforming Small Businesses | SA-AI Blog</title>
-  <meta name="description" content="Explore how Artificial Intelligence is revolutionizing small businesses in 2025 with practical tools, industry insights, and actionable strategies." />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
-  <style>
-    body {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 3rem 2rem;
-      font-family: 'Poppins', sans-serif;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>Your Trusted AI Advisor | SA-AI Solution</title>
+    <!-- Pico CSS for modern and minimalistic design -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <!-- Adding Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts for Fancy Styling -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 300;
+        }
 
-    h1, h2, h3 {
-      font-family: 'Playfair Display', serif;
-      color: #2b1b84;
-    }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: #2b1b84;
+        }
 
-    .meta {
-      font-size: 0.9rem;
-      color: #777;
-      margin-bottom: 2rem;
-    }
+        hgroup h2, hgroup h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+        }
+        
+        /* Fancy Header Styles */
+        nav.container-fluid {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
 
-    .back-button {
-      display: inline-block;
-      margin-top: 3rem;
-      background: #a74ef1;
-      color: white;
-      padding: 0.6rem 1.2rem;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: background 0.3s ease;
-    }
+        nav.container-fluid .logo {
+            display: flex;
+            align-items: center;
+            font-family: 'Playfair Display', serif;
+        }
 
-    .back-button:hover {
-      background: #8e3de8;
-    }
+        nav.container-fluid .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
 
-    section {
-      margin-bottom: 2.5rem;
-    }
+        nav.container-fluid ul.nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
 
-    ul, ol {
-      padding-left: 1.5rem;
-    }
+        nav.container-fluid ul.nav-links li {
+            font-size: 1rem;
+            font-weight: 500;
+            font-family: 'Poppins', sans-serif;
+        }
 
-    table {
-      width: 100%;
-      margin-top: 1.5rem;
-    }
+        nav.container-fluid ul.nav-links li a {
+            text-decoration: none;
+            color: #333;
+            transition: color 0.3s;
+        }
 
-    th, td {
-      text-align: left;
-      padding: 0.75rem 1rem;
-    }
+        nav.container-fluid ul.nav-links li a:hover {
+            color: #664ef1;
+        }
 
-    thead {
-      background-color: #f3f1fe;
-    }
+        nav.container-fluid .cta-button {
+            background: #a74ef1;
+            color: #ffffff;
+            font-weight: 500;
+            font-family: 'Poppins', sans-serif;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
 
-    tbody tr:nth-child(even) {
-      background-color: #fafafa;
-    }
-  </style>
+        nav.container-fluid .cta-button:hover {
+            background: #8e3de8;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, rgba(99, 58, 217, 0.8), rgba(191, 64, 191, 0.8)), 
+                url('/path/to/your/hero-image.jpg') center/cover no-repeat;
+            padding: 100px 20px;
+            color: white;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #2b1b84;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: white;
+            margin-bottom: 2rem;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .hero a.button {
+            background: #a74ef1;
+            color: #ffffff;
+            font-size: 1rem;
+            padding: 15px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .hero a.button:hover {
+            background: #8e3de8;
+        }
+
+        .blog-section {
+            width: 100%;
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 5rem 2rem;
+            background-color: #f3f1fe;
+            border-top: 4px solid #a74ef1;
+        }
+        
+        .blog-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .blog-header h2 {
+            font-size: 2.8rem;
+            color: #2b1b84;
+            margin-bottom: 0.5rem;
+        }
+        
+        .blog-header p {
+            font-size: 1.2rem;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+            gap: 2.5rem;
+        }
+        
+        .blog-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+        }
+        
+        .blog-card h3 {
+            font-size: 1.7rem;
+            color: #2b1b84;
+            margin-bottom: 1rem;
+        }
+        
+        .blog-meta {
+            font-size: 1rem;
+            color: #888;
+            margin-bottom: 1.2rem;
+        }
+        
+        .blog-read-button {
+            background: #a74ef1;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            border-radius: 8px;
+            display: inline-block;
+            transition: background 0.3s ease;
+        }
+        
+        .blog-read-button:hover {
+            background: #8e3de8;
+        }
+
+        .about-us {
+            position: relative;
+            width: 80%;
+            margin: 0 auto;  /* Center the container */
+            background: url('/images/bg.gif') center/cover no-repeat;
+            padding: 100px 20px;
+            color: white;
+            text-align: left;
+            filter: grayscale(40%);
+            border-radius: 20px; /* Adding a border-radius for a better visual effect */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Adding some shadow for a lifted effect */
+        }
+
+        .about-us::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent dark overlay */
+            z-index: 1;
+            border-radius: 20px; /* Match the border-radius of the container */
+        }
+
+        .about-us-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .about-us h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #ffffff;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .about-us p {
+            font-size: 1.25rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            color: #ffffff;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .about-us .button {
+            background: #a74ef1;
+            border: none;
+            color: white;
+            font-size: 1rem;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .about-us .button:hover {
+            background: #8e3de8;
+        }
+        
+        .services, .industries, .recent-projects {
+            padding: 2rem;
+        }
+
+        .services, .industries {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-icon, .industry-icon, .project-icon {
+            font-size: 40px;
+            color: #664ef1;
+            margin-bottom: 1rem;
+        }
+
+        .recent-projects {
+            padding: 3rem 2rem;
+        }
+
+        .contact-section {
+            background: linear-gradient(180deg, #664ef1, #a74ef1);
+            color: white;
+            text-align: center;
+            padding: 3rem 2rem;
+        }
+
+        .contact-section p {
+            color: white; /* Set the contact section paragraph text color to white */
+        }
+
+        footer {
+            padding: 2rem;
+            text-align: center;
+        }
+    </style>
 </head>
+
 <body>
+    <!-- Fancy Navigation Bar -->
+    <nav class="container-fluid">
+        <!-- Logo Area -->
+        <div class="logo">
+        <img src="images/logo.png" alt="Shelton Angelina LLC Logo" style="height: 80px;">
+        <strong>SA-AI Solution</strong>
+        </div>
 
-  <article>
-    <h1>How AI is Transforming Small Businesses in 2025</h1>
-    <p class="meta">🗓️ <strong>Date:</strong> March 17, 2025 &nbsp;&nbsp; ✍️ <strong>Author:</strong> Qianye Wu</p>
+        <!-- Navigation Links -->
+        <ul class="nav-links">
+            <li><a href="#home">01 Home</a></li>
+            <li><a href="#services">02 Services</a></li>
+            <li><a href="#industries">03 Industries</a></li>
+            <li><a href="#projects">04 Projects</a></li>
+            <li><a href="#contact">05 Contact Us</a></li>
+        </ul>
 
-    <section>
-      <p>In recent years, <strong>Artificial Intelligence (AI)</strong> has become a game changer for small businesses. With accessible platforms and user-friendly tools, AI is no longer just a luxury for large corporations. It is transforming how smaller companies operate, market, and grow in a competitive environment. This article dives into how AI helps small businesses thrive in 2025 and the key ways it’s being used every day.</p>
+        <!-- Call to Action Button -->
+        <a href="#contact" class="cta-button">Get in Touch</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <h1>Empower You and Your Business with AI</h1>
+        <p>Every Business Counts and Can Benefit From the AI Revolution, even small businesses.</p>
+        <p>And We Are Here To Help.</p>
+        <a href="#services" class="button primary">Explore Our Work</a>
+    </header>
+
+    <!-- Services Section -->
+    <main id="services" class="services container">
+        <h2>Let’s see how we can help</h2>
+        <div class="grid">
+            <section>
+                <div class="service-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <hgroup>
+                    <h2><strong>AI Consulting<strong></h2>
+                    <h3>Transform your business operations with tailored AI solutions</h3>
+                </hgroup>
+                <p>We provide professional AI consulting services to help businesses understand and apply AI technologies in their daily operations.</p>
+            </section>
+            <section>
+                <div class="service-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <hgroup>
+                    <h2><strong>AI Tools & Solutions<strong></h2>
+                    <h3>Personalized AI solutions for small businesses</h3>
+                </hgroup>
+                <p>Customized AI tools for specific industries such as real estate, hospitality, and education to improve efficiency and profitability.</p>
+            </section>
+        </div>
+    </main>
+
+    <!-- Enhanced About Us Section -->
+    <section id="about" class="about-us">
+        <div class="about-us-content">
+            <p><strong>At SA-AI Solution, we deliver personalized, low-cost AI solutions to empower small businesses in traditional industries. Our mission is to make advanced AI technologies accessible, helping businesses optimize operations, reduce costs, and improve customer interactions.<strong></p>
+            <a href="#about" style="font-weight: normal;" class="button">Who we are</a>
+        </div>
+    </section>
+                
+    <!-- Industries Section -->
+    <section id="industries" class="industries container">
+        <h2>Industries We Serve</h2>
+        <div class="grid">
+            <section>
+                <div class="industry-icon">
+                    <i class="fas fa-building"></i>
+                </div>
+                <h3>Real Estate</h3>
+                <p>AI-powered lease management, pricing prediction, and personalized marketing tools.</p>
+            </section>
+            <section>
+                <div class="industry-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <h3>Restaurant</h3>
+                <p>Ingredient procurement optimization, menu personalization, and sales forecasting.</p>
+            </section>
+            <section>
+                <div class="industry-icon">
+                    <i class="fas fa-hotel"></i>
+                </div>
+                <h3>Tourism & Hospitality</h3>
+                <p>Dynamic pricing tools, personalized trip planners, and sentiment analysis for customer reviews.</p>
+            </section>
+            <section>
+                <div class="industry-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3>Education</h3>
+                <p>Interactive homework assistance, personalized learning recommendations, and progress analysis.</p>
+            </section>
+        </div>
     </section>
 
-    <section>
-      <h2>Why AI Is No Longer Just for Big Tech</h2>
-      <p>Once reserved for companies with massive data teams and tech infrastructure, <strong>AI technology</strong> is now available through affordable, plug-and-play solutions. Even solo entrepreneurs can use no-code AI tools to automate tasks, gain insights, and improve decision-making. Cloud services, pre-trained models, and SaaS platforms like ChatGPT, Jasper AI, and Lumen5 have removed traditional barriers to entry.</p>
+    <!-- Blog Section -->
+    <section id="blog" class="blog-section">
+      <div class="blog-header">
+        <h2>📝 Insights & Stories</h2>
+        <p>Explore our latest thoughts, innovations, and success stories in the world of AI.</p>
+      </div>
+      <div id="blog-container" class="blog-grid"></div>
+    </section>
+    
+    <script>
+        let blogPosts = [];  // Global scope for both functions
+        async function loadBlogPosts() {
+            try {
+              const response = await fetch("blog-posts.json");
+              blogPosts = await response.json(); // Save to global scope
+        
+              const blogContainer = document.getElementById("blog-container");
+              blogContainer.innerHTML = "";
+        
+              const storedViews = JSON.parse(localStorage.getItem("blogViews")) || {};
+        
+              blogPosts.forEach(post => {
+                const daysSincePublished = Math.floor(
+                  (new Date() - new Date(post.date)) / (1000 * 60 * 60 * 24)
+                );
+                const estimatedViews = Math.floor(450 * Math.log(daysSincePublished + 1) + 10);
+        
+                const views = storedViews[post.id] || estimatedViews;
+        
+                const postElement = document.createElement("div");
+                postElement.classList.add("blog-card");
+                postElement.innerHTML = `
+                  <h3>${post.title}</h3>
+                  <p class="blog-meta">
+                    <strong>By:</strong> ${post.author} &nbsp; | &nbsp;
+                    <strong>Date:</strong> ${post.date} &nbsp; | &nbsp;
+                    <strong>Views:</strong> <span id="views-${post.id}">${views}</span>
+                  </p>
+                  <p>${post.excerpt}</p>
+                  <a href="${post.file}" class="button blog-read-button" onclick="incrementViews(${post.id})">Read More</a>
+                `;
+        
+                blogContainer.appendChild(postElement);
+              });
+            } catch (err) {
+              console.error("Error loading blog posts:", err);
+            }
+          }
+
+    
+        function incrementViews(postId) {
+            const views = JSON.parse(localStorage.getItem("blogViews")) || {};
+        
+            // Initialize if first time
+            if (!(postId in views)) {
+              const post = blogPosts.find(p => p.id === postId);
+              const daysSincePublished = Math.floor(
+                (new Date() - new Date(post.date)) / (1000 * 60 * 60 * 24)
+              );
+              views[postId] = Math.floor(450 * Math.log(daysSincePublished + 1) + 10);
+            }
+        
+            views[postId] += 1;
+            localStorage.setItem("blogViews", JSON.stringify(views));
+            document.getElementById(`views-${postId}`).textContent = views[postId];
+          }
+
+      document.addEventListener("DOMContentLoaded", loadBlogPosts);
+    </script>
+
+    <!-- Recent Projects Section -->
+    <section id="projects" class="recent-projects container">
+        <h2>Recent Projects</h2>
+        <div class="grid">
+            <div>
+                <div class="project-icon">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <h3>Empowering Professionals to Work with LLMs</h3>
+                <p>We helped individuals build their abilities to work with large language models (LLMs) through hands-on, industry-level projects. This initiative enhanced participants' skillsets, giving them valuable experience to add to their resumes, and making them competitive for roles in AI and data-driven industries.</p>
+            </div>
+            <div>
+                <div class="project-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3>Ingredient Procurement Optimization for Restaurants</h3>
+                <p>This project aimed to optimize ingredient procurement by predicting demand and minimizing waste for a restaurant in San Francisco. The solution significantly reduced costs and improved inventory management.</p>
+            </div>
+        </div>
+
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Let's Build Something Different</p>
+            <p>Take the first step towards a brighter future with expert guidance and cutting-edge AI. </p>
+            <p> Welcome reach out to us at:</p>
+            <p>
+                <strong>Email:</strong> <a href="mailto:contact.saaisolution@gmail.com">contact.saaisolution@gmail.com</a>
+            </p>
+        </div>
     </section>
 
-    <section>
-      <h2>Practical Applications of AI for Small Businesses</h2>
-
-      <h3>1. Customer Service Automation</h3>
-      <p><strong>AI chatbots and virtual assistants</strong> now offer 24/7 customer support without hiring full-time agents. Small businesses use tools like Tidio or Intercom to answer FAQs, book appointments, and even process basic orders. This means businesses can maintain fast, consistent service—even outside office hours—while reducing customer churn and support costs.</p>
-
-      <h3>2. Sales and Marketing Intelligence</h3>
-      <p><strong>AI-driven CRMs</strong> can predict customer behavior, personalize marketing campaigns, and suggest the best times to follow up. Platforms like HubSpot AI and Mailchimp analyze open rates, segment audiences, and create dynamic content to maximize conversions. This allows businesses to operate with the same strategic insight that enterprise companies enjoy.</p>
-
-      <h3>3. Data Analytics for Decision-Making</h3>
-      <p>Many small business owners lack time or skills to interpret raw data. With <strong>AI analytics platforms</strong> like Google Looker Studio and Tableau AI, they can now ask plain-language questions and receive dashboards or insights in seconds. These tools help track inventory, forecast sales, monitor web traffic, and guide pricing strategies—without needing a data analyst on staff.</p>
-
-      <h3>4. Industry-Specific AI</h3>
-      <p>AI tools are becoming specialized by verticals. In <strong>real estate</strong>, AI can analyze property values and generate listing descriptions automatically. <strong>Restaurants</strong> use AI for dynamic menu pricing, demand forecasting, and minimizing food waste. In <strong>education</strong>, teachers use AI to tailor lesson plans and monitor student progress in real time.</p>
-
-      <h4>Comparison of AI Tools by Business Type</h4>
-      <table>
-        <thead>
-          <tr>
-            <th>Industry</th>
-            <th>AI Tool Example</th>
-            <th>Use Case</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Real Estate</td>
-            <td>Zillow AI, Restb.ai</td>
-            <td>Price prediction, image tagging, description generation</td>
-          </tr>
-          <tr>
-            <td>Restaurants</td>
-            <td>ClearCOGS, PreciTaste</td>
-            <td>Menu optimization, demand forecasting, food waste reduction</td>
-          </tr>
-          <tr>
-            <td>Education</td>
-            <td>Knewton, Squirrel AI</td>
-            <td>Adaptive learning, personalized tutoring, progress tracking</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section>
-      <h2>The Real ROI of AI</h2>
-      <p>The benefits of AI extend beyond cost savings. Businesses adopting AI experience faster response times, better customer experiences, and more informed decision-making. Studies show that small businesses using AI are 2.5x more likely to report revenue growth compared to those who don’t. AI makes it possible to scale without scaling staff.</p>
-    </section>
-
-    <section>
-      <h2>How to Get Started with AI (Even If You’re Not Technical)</h2>
-      <p>Getting started with AI doesn’t require coding skills or a data science degree. Start by identifying one business task that takes a lot of time—like scheduling, email follow-ups, or lead scoring. Then try an AI tool that fits your workflow. Popular entry points include:</p>
-      <ol>
-        <li><strong>Tidio</strong> for customer chat automation</li>
-        <li><strong>Zapier + OpenAI</strong> for content and workflow automation</li>
-        <li><strong>Notion AI</strong> for summarizing documents or brainstorming content</li>
-        <li><strong>Looka or Canva AI</strong> for generating visuals or branding assets</li>
-      </ol>
-      <p>Track the results and iterate. Many tools offer free plans or trials, so experimentation is low-risk but high-reward.</p>
-    </section>
-
-    <section>
-      <h2>Final Thoughts</h2>
-      <p>AI is reshaping what’s possible for small businesses in 2025. With the right tools, even a team of one can deliver services and insights that rival large companies. By adopting AI now, small business owners can save time, boost growth, and build a future-proof foundation. The earlier you start, the greater the advantage you gain.</p>
-    </section>
-
-    <section>
-      <h3>Key Takeaways</h3>
-      <ul>
-        <li>AI tools are now accessible and affordable for small businesses</li>
-        <li>Top use cases include chatbots, marketing automation, analytics, and personalization</li>
-        <li>Start small, choose the right tools, and scale based on results</li>
-        <li>AI adoption leads to revenue growth, better customer retention, and smarter operations</li>
-      </ul>
-    </section>
-
-    <a href="index.html#blog" class="back-button">&larr; Back to Blog</a>
-  </article>
+    <!-- Footer Section -->
+    <footer class="container">
+        <small style="font-weight: normal;">
+            <a href="https://www.linkedin.com/company/sa-ai-solution/" target="_blank" style="font-weight: normal;">Connect through LinkedIn</a> • 
+            <a href="#" style="font-weight: normal;">Terms of Service</a> • 
+            <a href="#" style="font-weight: normal;">Contact Us</a> <br>
+            &copy; 2024 Shelton Angelina LLC. All rights reserved.
+        </small>
+    </footer>
 
 </body>
+
 </html>
