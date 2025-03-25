@@ -410,7 +410,8 @@
     </section>
     
     <script>
-        let blogPosts = [];  // Global scope for both functions
+        let blogPosts = []; // globally track posts
+
         async function loadBlogPosts() {
             try {
               const response = await fetch("blog-posts.json");
@@ -459,7 +460,7 @@
               const daysSincePublished = Math.floor(
                 (new Date() - new Date(post.date)) / (1000 * 60 * 60 * 24)
               );
-              views[postId] = Math.floor(450 * Math.log(daysSincePublished + 1) + 10);
+              views[postId] = Math.floor(1100 * Math.log(daysSincePublished + 1) - 300);
             }
         
             views[postId] += 1;
