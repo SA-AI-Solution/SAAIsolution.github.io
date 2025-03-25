@@ -425,7 +425,7 @@
                 const daysSincePublished = Math.floor(
                   (new Date() - new Date(post.date)) / (1000 * 60 * 60 * 24)
                 );
-                const estimatedViews = Math.floor(8000 / (1 + Math.exp(-0.045 * (daysSincePublished - 105))));
+                const estimatedViews = Math.floor(1100 * Math.log(daysSincePublished + 1) - 300);
                   
                 const views = storedViews[post.id] || estimatedViews;
         
