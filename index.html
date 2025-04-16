@@ -411,66 +411,41 @@
     </section>
     
     <script>
-        let blogPosts = []; // globally track posts
-
-        async function loadBlogPosts() {
-            try {
-              const response = await fetch("blog-posts.json");
-              blogPosts = await response.json(); // Save to global scope
-        
-              const blogContainer = document.getElementById("blog-container");
-              blogContainer.innerHTML = "";
-        
-              const storedViews = JSON.parse(localStorage.getItem("blogViews")) || {};
-        
-              blogPosts.forEach(post => {
-                const daysSincePublished = Math.floor(
-                  (new Date() - new Date(post.date)) / (1000 * 60 * 60 * 24)
-                );
-                const estimatedViews = Math.floor(1100 * Math.log(daysSincePublished + 1) - 500);
-                  
-                const views = storedViews[post.id] || estimatedViews;
-        
-                const postElement = document.createElement("div");
-                postElement.classList.add("blog-card");
-                postElement.innerHTML = `
-                  <h3>${post.title}</h3>
-                  <p class="blog-meta">
-                    <strong>By:</strong> ${post.author} &nbsp; | &nbsp;
-                    <strong>Date:</strong> ${post.date} &nbsp; | &nbsp;
-                    <strong>Views:</strong> <span id="views-${post.id}">${views}</span>
-                  </p>
-                  <p>${post.excerpt}</p>
-                  <a href="${post.file}" class="button blog-read-button" onclick="incrementViews(${post.id})">Read More</a>
-                `;
-        
-                blogContainer.appendChild(postElement);
-              });
-            } catch (err) {
-              console.error("Error loading blog posts:", err);
-            }
-          }
-
+      let blogPosts = [];
     
-        function incrementViews(postId) {
-            const views = JSON.parse(localStorage.getItem("blogViews")) || {};
-        
-            // Initialize if first time
-            if (!(postId in views)) {
-              const post = blogPosts.find(p => p.id === postId);
-              const daysSincePublished = Math.floor(
-                (new Date() - new Date(post.date)) / (1000 * 60 * 60 * 24)
-              );
-              views[postId] = Math.floor(1100 * Math.log(daysSincePublished + 1) - 500);
-            }
-        
-            views[postId] += 1;
-            localStorage.setItem("blogViews", JSON.stringify(views));
-            document.getElementById(`views-${postId}`).textContent = views[postId];
-          }
-
+      async function loadBlogPosts() {
+        try {
+          const response = await fetch("blog-posts.json");
+          blogPosts = await response.json();
+    
+          // Sort by date descending (newest first)
+          blogPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
+    
+          const blogContainer = document.getElementById("blog-container");
+          blogContainer.innerHTML = "";
+    
+          blogPosts.forEach(post => {
+            const postElement = document.createElement("div");
+            postElement.classList.add("blog-card");
+            postElement.innerHTML = `
+              <h3>${post.title}</h3>
+              <p class="blog-meta">
+                <strong>By:</strong> ${post.author} &nbsp; | &nbsp;
+                <strong>Date:</strong> ${post.date}
+              </p>
+              <p>${post.excerpt}</p>
+              <a href="${post.file}" class="button blog-read-button">Read More</a>
+            `;
+            blogContainer.appendChild(postElement);
+          });
+        } catch (err) {
+          console.error("Error loading blog posts:", err);
+        }
+      }
+    
       document.addEventListener("DOMContentLoaded", loadBlogPosts);
     </script>
+
 
     <!-- Recent Projects Section -->
     <section id="projects" class="recent-projects container">
